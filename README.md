@@ -41,7 +41,6 @@ This project was built for *INDIVIDUAL Flutter Lab 4: Consuming APIs in Flutter*
 
 ## Screenshots
 
-> Replace the image paths below with the actual file names you saved in `posts_manager/Assets/`.
 
 - **App icon & splash**
 
@@ -49,27 +48,27 @@ This project was built for *INDIVIDUAL Flutter Lab 4: Consuming APIs in Flutter*
 
 - **Login screen (select user)**
 
-  `![Login screen](posts_manager/Assets/Login.jpeg)`
+  ![Login screen](posts_manager/Assets/Login.jpeg)
 
 - **Posts list with cards**
 
-  `![Posts list](posts_manager/Assets/Retrieval.jpeg)`
+  ![Posts list](posts_manager/Assets/Retrieval.jpeg)
 
 - **Post details**
 
-  `![Post details](posts_manager/Assets/Post_Details.jpeg)`
+  ![Post details](posts_manager/Assets/Post_Details.jpeg)
 
 - **Create post**
 
-  `![Create post](posts_manager/Assets/Creating.jpeg)`
+  ![Create post](posts_manager/Assets/Creating.jpeg)
 
 - **Edit post**
 
-  `![Edit post](posts_manager/Assets/Editing.jpeg)`
+  ![Edit post](posts_manager/Assets/Editing.jpeg)
 
 - **Error / offline state**
 
-  `![Error state](posts_manager/Assets/Offline_state.jpeg)`
+  ![Error state](posts_manager/Assets/Offline_state.jpeg)
 
 ---
 
