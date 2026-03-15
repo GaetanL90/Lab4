@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
+
+import 'models/session.dart';
+import 'screens/login_screen.dart';
 import 'screens/posts_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Session? _session;
+
+  void _handleLoggedIn(Session session) {
+    setState(() {
+      _session = session;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +32,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      home: const PostsListScreen(),
+      home: _session == null
+          ? LoginScreen(onLoggedIn: _handleLoggedIn)
+          : PostsListScreen(session: _session!),
     );
   }
 }

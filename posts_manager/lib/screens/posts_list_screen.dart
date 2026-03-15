@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../models/post.dart';
+import '../models/session.dart';
 import '../services/post_service.dart';
 import 'post_detail_screen.dart';
 import 'post_form_screen.dart';
 
 class PostsListScreen extends StatefulWidget {
-  const PostsListScreen({super.key});
+  final Session session;
+
+  const PostsListScreen({super.key, required this.session});
 
   @override
   State<PostsListScreen> createState() => _PostsListScreenState();
@@ -40,7 +43,11 @@ class _PostsListScreenState extends State<PostsListScreen> {
 
   Future<void> _createPost() async {
     final created = await Navigator.of(context).push<Post>(
-      MaterialPageRoute(builder: (_) => const PostFormScreen()),
+      MaterialPageRoute(
+        builder: (_) => PostFormScreen(
+          defaultUserId: widget.session.userId,
+        ),
+      ),
     );
     if (created == null) return;
 

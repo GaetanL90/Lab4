@@ -4,8 +4,9 @@ import '../models/post.dart';
 
 class PostFormScreen extends StatefulWidget {
   final Post? existing;
+  final int? defaultUserId;
 
-  const PostFormScreen({super.key, this.existing});
+  const PostFormScreen({super.key, this.existing, this.defaultUserId});
 
   @override
   State<PostFormScreen> createState() => _PostFormScreenState();
@@ -34,7 +35,7 @@ class _PostFormScreenState extends State<PostFormScreen> {
     if (!_formKey.currentState!.validate()) return;
 
     final post = Post(
-      userId: widget.existing?.userId ?? 1,
+      userId: widget.existing?.userId ?? widget.defaultUserId ?? 1,
       id: widget.existing?.id,
       title: _titleController.text.trim(),
       body: _bodyController.text.trim(),
